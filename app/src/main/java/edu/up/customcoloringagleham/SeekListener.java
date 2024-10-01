@@ -2,8 +2,6 @@ package edu.up.customcoloringagleham;
 
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.SeekBar;
 
 public class SeekListener implements SeekBar.OnSeekBarChangeListener {

@@ -83,6 +83,9 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
         if(tempT.equals("Plate")){
             tempP = platePaint;
         }
+        else if(tempT.equals("Egg")){
+            tempP = eggPaint;
+        }
         else if(tempT.equals("Ketchup")){
             tempP = ketchupPaint;
         }
