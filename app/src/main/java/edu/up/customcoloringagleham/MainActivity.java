@@ -6,7 +6,11 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-//@author De'Ante Agleham
+/**
+ * Main activity for custom coloring assignment
+ *
+ * @author De'Ante Agleham
+ */
 
 public class MainActivity extends AppCompatActivity {
 

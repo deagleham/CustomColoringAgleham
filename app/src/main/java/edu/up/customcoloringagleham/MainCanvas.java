@@ -13,7 +13,11 @@ import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-//@author De'Ante Agleham
+/**
+ * Main canvas class that draws a breakfast plate and handles touch events
+ *
+ * @author De'Ante Agleham
+ */
 
 public class MainCanvas extends SurfaceView implements View.OnTouchListener {
 
@@ -32,7 +36,12 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
     SeekBar greenSeek = null;
     SeekBar blueSeek = null;
 
-    //Set up colors and touch listener
+    /**
+     * Sets up canvas colors, background, and touch listener
+     *
+     * @param context
+     * @param attrs
+     */
     public MainCanvas(Context context, AttributeSet attrs) {
         super(context, attrs);
         ketchupPaint = new Paint();
@@ -64,7 +73,14 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
         setOnTouchListener(this);
     }
 
-    //Set up view references
+    /**
+     * Sets up view references
+     *
+     * @param tv Text view object tracks selected object
+     * @param sbRed Seekbar tracks red value
+     * @param sbGreen Seekbar tracks green value
+     * @param sbBlue Seekbar tracks blue value
+     */
     public void setViewRefs(TextView tv, SeekBar sbRed, SeekBar sbGreen, SeekBar sbBlue) {
         this.currObjTV = tv;
         this.redSeek = sbRed;
@@ -72,7 +88,11 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
         this.blueSeek = sbBlue;
     }
 
-    //Returns the Paint associated with the currently selected object
+    /**
+     * Grabs paint value of selected object
+     *
+     * @return paint value of current object
+     */
     public Paint getPaint() {
         //step 1:  get the text of the currObjTV
         String tempT = currObjTV.getText().toString();
@@ -102,7 +122,11 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
         return tempP;
     }
 
-    //Draws a breakfast plate
+    /**
+     * Draw a breakfast plate
+     *
+     * @param canvas
+     */
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.drawCircle(550,500,500, platePaint);
@@ -113,7 +137,13 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
         canvas.drawRect(700, 200, 800, 1000, baconPaint2);
     }
 
-    //Choose selected object and update seekbars to match color
+    /**
+     * Track x and y value of touch to find selected object and update seekbars
+     *
+     * @param view
+     * @param motionEvent
+     * @return true
+     */
     public boolean onTouch(View view, MotionEvent motionEvent){
         float xLoc = motionEvent.getX();
         float yLoc = motionEvent.getY();

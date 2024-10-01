@@ -4,7 +4,11 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.widget.SeekBar;
 
-//@author De'Ante Agleham
+/**
+ * Keeps track of seekbar progress for red, green, and blue and updates canvas
+ *
+ * @author De'Ante Agleham
+ */
 
 public class SeekListener implements SeekBar.OnSeekBarChangeListener {
     SeekBar redSeek;
@@ -12,7 +16,14 @@ public class SeekListener implements SeekBar.OnSeekBarChangeListener {
     SeekBar blueSeek;
     MainCanvas main;
 
-    //Constructor for SeekListener
+    /**
+     * Constructor
+     *
+     * @param m MainCanvas object
+     * @param red red seekbar
+     * @param green green seekbar
+     * @param blue blue seekbar
+     */
     public SeekListener(MainCanvas m, SeekBar red, SeekBar green, SeekBar blue){
         redSeek = red;
         greenSeek = green;
@@ -20,7 +31,13 @@ public class SeekListener implements SeekBar.OnSeekBarChangeListener {
         main = m;
     }
 
-    //Check if seek bar progress for red, green, and/or blue changed, then update color of selected element
+    /**
+     * Checks for seekbar progress change and updates colors accordingly
+     *
+     * @param seekBar
+     * @param i
+     * @param b
+     */
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
         int red = redSeek.getProgress();
