@@ -19,6 +19,7 @@ public class SeekListener implements SeekBar.OnSeekBarChangeListener {
         main = m;
     }
 
+    //Check if seek bar progress for red, green, and/or blue changed and update color of selected element
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
         int red = redSeek.getProgress();

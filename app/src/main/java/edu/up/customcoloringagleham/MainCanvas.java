@@ -63,7 +63,7 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
         setOnTouchListener(this);
     }
 
-    //use this method to setup the view references
+    //view references
     public void setViewRefs(TextView tv, SeekBar sbRed, SeekBar sbGreen, SeekBar sbBlue) {
         this.currObjTV = tv;
         this.redSeek = sbRed;
