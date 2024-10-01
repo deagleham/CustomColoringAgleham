@@ -63,18 +63,21 @@
                 android:id="@+id/seekRed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:max="255"
                 android:layout_weight="1" />
 
             <SeekBar
                 android:id="@+id/seekGreen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:max="255"
                 android:layout_weight="1" />
 
             <SeekBar
                 android:id="@+id/seekBlue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:max="255"
                 android:layout_weight="1" />
         </LinearLayout>
 
