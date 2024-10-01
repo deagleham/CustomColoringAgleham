@@ -4,6 +4,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.widget.SeekBar;
 
+//@author De'Ante Agleham
+
 public class SeekListener implements SeekBar.OnSeekBarChangeListener {
     SeekBar redSeek;
     SeekBar greenSeek;

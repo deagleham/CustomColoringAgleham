@@ -3,9 +3,10 @@ package edu.up.customcoloringagleham;
 import android.os.Bundle;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
+//@author De'Ante Agleham
 
 public class MainActivity extends AppCompatActivity {
 
