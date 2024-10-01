@@ -32,6 +32,7 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
     SeekBar greenSeek = null;
     SeekBar blueSeek = null;
 
+    //Set up colors and touch listener
     public MainCanvas(Context context, AttributeSet attrs) {
         super(context, attrs);
         ketchupPaint = new Paint();
@@ -63,7 +64,7 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
         setOnTouchListener(this);
     }
 
-    //view references
+    //Set up view references
     public void setViewRefs(TextView tv, SeekBar sbRed, SeekBar sbGreen, SeekBar sbBlue) {
         this.currObjTV = tv;
         this.redSeek = sbRed;
@@ -71,9 +72,7 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
         this.blueSeek = sbBlue;
     }
 
-    /**
-     * returns the Paint associated with the currently selected object
-     */
+    //Returns the Paint associated with the currently selected object
     public Paint getPaint() {
         //step 1:  get the text of the currObjTV
         String tempT = currObjTV.getText().toString();
@@ -103,6 +102,7 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
         return tempP;
     }
 
+    //Draws a breakfast plate
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.drawCircle(550,500,500, platePaint);
@@ -113,6 +113,7 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
         canvas.drawRect(700, 200, 800, 1000, baconPaint2);
     }
 
+    //Choose selected object and update seekbars to match color
     public boolean onTouch(View view, MotionEvent motionEvent){
         float xLoc = motionEvent.getX();
         float yLoc = motionEvent.getY();
@@ -190,6 +191,7 @@ public class MainCanvas extends SurfaceView implements View.OnTouchListener {
             blueSeek.setProgress(blueComp);
         }
 
+        //check if none is selected
         else {
             currObjTV.setText("??");
             bacColor = 0;

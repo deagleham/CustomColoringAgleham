@@ -12,6 +12,7 @@ public class SeekListener implements SeekBar.OnSeekBarChangeListener {
     SeekBar blueSeek;
     MainCanvas main;
 
+    //Constructor for SeekListener
     public SeekListener(MainCanvas m, SeekBar red, SeekBar green, SeekBar blue){
         redSeek = red;
         greenSeek = green;
@@ -19,7 +20,7 @@ public class SeekListener implements SeekBar.OnSeekBarChangeListener {
         main = m;
     }
 
-    //Check if seek bar progress for red, green, and/or blue changed and update color of selected element
+    //Check if seek bar progress for red, green, and/or blue changed, then update color of selected element
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
         int red = redSeek.getProgress();
