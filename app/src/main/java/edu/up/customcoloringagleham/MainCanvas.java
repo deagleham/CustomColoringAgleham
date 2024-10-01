@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 public class MainCanvas extends SurfaceView implements View.OnTouchListener {
 
-    //For our favorite color
+    //Colors
     private Paint ketchupPaint;
     private Paint eggPaint;
     private Paint baconPaint1;
